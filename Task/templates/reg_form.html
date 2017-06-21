@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+		<div class="container">
+		
+		<div class="container">
+        <div>
+         <h5>Register Here</h5>
+         <hr>
+         <form method="post"  class="form-horizontal">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <hr>
+        <button type="submit">Submit</button>
+
+        </form>
+        </div>
+        <style>
+        
+        ul{
+            font-size:10px;
+        }
+        </style>
+
+		</div>
+{%endblock%}
+	

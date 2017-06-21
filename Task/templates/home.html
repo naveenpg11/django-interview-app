@@ -1,0 +1,45 @@
+<html>
+    <head>
+        
+         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel = "stylesheet" type = "text/css"  href = "/static/bootstrap.css" />
+        <link rel = "stylesheet" type = "text/css"  href = "/static/skeleton.css" />
+        <title>Let's Chat</title>
+    </head>
+    <body>
+        <br>
+
+		<div class="container">
+  		  <div class="container">
+  		  	
+  		  	<button >CHAT ROOMS</button>
+  		  	<a href="{% url 'account:logout' %}"> <button class="exit">Log Out</button></a>
+
+   		
+			<hr class="design">
+
+			{% for room in Room %}
+			     <div class="col-sm-4">
+			        <a href='/chat/{{room.label}}'><button>{{room.name}}</button></a>
+			     </div>
+			{% endfor %}
+
+			</div>
+<style type="text/css">
+.exit{
+
+  margin-left: 420px;
+}
+.design{
+	margin-top: 10px;
+
+}
+.double{
+		border-top: 3px double #8c8b8b;
+
+}
+</style>
+</div>
+
+</body>
+</html>

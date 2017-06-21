@@ -1,0 +1,56 @@
+<html>
+    <head>
+        
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel = "stylesheet" type = "text/css"  href = "/static/bootstrap.css" />
+        <link rel = "stylesheet" type = "text/css"  href = "/static/skeleton.css" />
+
+
+        {% block head %}
+        <title>Base</title>
+        {% endblock %}
+    </head>
+    <body>
+        <br>
+        <div class="container">
+            <nav class="navbar navbar-default">
+            <div class="container-fluid">
+              <div class="navbar-header">
+              
+                <a class="navbar-brand" >Let's Chat </a>
+              </div>
+              <div id="navbar" class="navbar-collapse collapse">
+                {% if user.is_authenticated %}
+                <ul class="nav navbar-nav">
+                    {% block user %}
+                    
+                    {% endblock %}
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="{% url 'account:logout' %}">Log out</a></li>
+                </ul>
+                {% else %}
+               
+                <ul class="nav navbar-nav navbar-right">
+                   <li><a href="{% url 'account:login' %}">Login</a></li>
+                  <li><a href="{% url 'account:register' %}">Register</a></li>
+                </ul>
+                {% endif %}
+              </div><!--/.nav-collapse -->
+            </div><!--/.container-fluid -->
+          </nav>
+        </div>
+        {% block body %}
+            <h1>Base</h1>
+        {% endblock %}
+           <style>
+    
+    .navbar-default{
+      background-color: white;
+    }
+    </style>
+    </body>
+ 
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"/>
+</html>
