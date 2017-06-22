@@ -32,6 +32,8 @@ Download the Git Project and Navigate into the Project in you Virtual Environmen
 
 Customize the Database Setting in Settings.py 
 
+Then, you'll need Redis running locally; the settings are configured to point to localhost, port 6379, but you can change this in the CHANNEL_LAYERS setting in <pre>settings.py</pre>
+
 Finally, run:
 
 <pre>python manage.py migrate</pre>
