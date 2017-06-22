@@ -17,7 +17,7 @@ virtualenv is a tool to create isolated Python environments. virtualenv creates 
 
 Install virtualenv via pip:
 
-$ pip install virtualenv
+<pre>$ pip install virtualenv</pre>
 
 Create a virtual environment for a project:
 <pre>
@@ -41,6 +41,8 @@ Make yourself a superuser account:
 <pre>python manage.py createsuperuser</pre>
 
 <pre>python manage.py runserver</pre>
+
+<b>Usage:</b>
 
 Then, log into http://127.0.0.1:8000/admin/ and make a couple of Room objects. 
 
