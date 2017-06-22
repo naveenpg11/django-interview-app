@@ -2,16 +2,16 @@
 
 Chat Application Using Django Channels
 
-INSTALLATIONS:-
+<b>INSTALLATIONS:-</b>
 
 Installing with get-pip.py:
 To install pip, securely download get-pip.py.
 
 Then run the following:
 
-python get-pip.py
+<pre>python get-pip.py</pre>
 
-virtualenv:
+<b>virtualenv:</b>
 
 virtualenv is a tool to create isolated Python environments. virtualenv creates a folder which contains all the necessary executables to use the packages that a Python project would need.
 
@@ -20,30 +20,27 @@ Install virtualenv via pip:
 $ pip install virtualenv
 
 Create a virtual environment for a project:
-
+<pre>
 $ cd my_project_folder
-
 $ virtualenv my_project
-
 $ cd my_project
-
 $ .\Scripts\activate
-
+</pre>
 Download the Git Project and Navigate into the Project in you Virtual Environment
 
-pip install -r requirements.txt
+<pre>pip install -r requirements.txt</pre>
 
 Customize the Database Setting in Settings.py 
 
 Finally, run:
 
-python manage.py migrate
+<pre>python manage.py migrate</pre>
 
 Make yourself a superuser account:
 
-python manage.py createsuperuser
+<pre>python manage.py createsuperuser</pre>
 
-python manage.py runserver
+<pre>python manage.py runserver</pre>
 
 Then, log into http://127.0.0.1:8000/admin/ and make a couple of Room objects. 
 
