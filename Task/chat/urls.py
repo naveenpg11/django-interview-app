@@ -3,5 +3,6 @@ from .import views
 
 urlpatterns = [
 	url(r'^$',views.home),
-		url(r'^(?P<labels>\w+)',views.chatroom)	,
+	url(r'^(?P<labels>[\w-]+)',views.chatroom),
+
 ]
